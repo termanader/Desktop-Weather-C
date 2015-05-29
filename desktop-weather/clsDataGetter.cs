@@ -13,7 +13,7 @@ namespace DesktopWeather
 {
     class clsDataGetter
     {
-        const string API_KEY = "06fab55021a0b1d1b47ee909fb8723f9";
+        const string API_KEY = "";
 
         float flat = 0;
         float flon = 0;

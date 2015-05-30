@@ -81,7 +81,8 @@
             // lblCurrentConditions
             // 
             this.lblCurrentConditions.AutoSize = true;
-            this.lblCurrentConditions.Location = new System.Drawing.Point(22, 87);
+            this.lblCurrentConditions.Location = new System.Drawing.Point(3, 93);
+            this.lblCurrentConditions.MaximumSize = new System.Drawing.Size(95, 0);
             this.lblCurrentConditions.Name = "lblCurrentConditions";
             this.lblCurrentConditions.Size = new System.Drawing.Size(35, 13);
             this.lblCurrentConditions.TabIndex = 9;
@@ -89,9 +90,10 @@
             // 
             // pbCurrentConditions
             // 
-            this.pbCurrentConditions.Location = new System.Drawing.Point(25, 54);
+            this.pbCurrentConditions.Location = new System.Drawing.Point(25, 60);
             this.pbCurrentConditions.Name = "pbCurrentConditions";
             this.pbCurrentConditions.Size = new System.Drawing.Size(45, 30);
+            this.pbCurrentConditions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCurrentConditions.TabIndex = 8;
             this.pbCurrentConditions.TabStop = false;
             // 
@@ -129,17 +131,18 @@
             // lblTodayDate
             // 
             this.lblTodayDate.AutoSize = true;
-            this.lblTodayDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTodayDate.Location = new System.Drawing.Point(25, 122);
+            this.lblTodayDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTodayDate.Location = new System.Drawing.Point(31, 133);
             this.lblTodayDate.Name = "lblTodayDate";
-            this.lblTodayDate.Size = new System.Drawing.Size(48, 22);
+            this.lblTodayDate.Size = new System.Drawing.Size(38, 17);
             this.lblTodayDate.TabIndex = 11;
             this.lblTodayDate.Text = "Date";
             // 
             // lblTodayConditions
             // 
             this.lblTodayConditions.AutoSize = true;
-            this.lblTodayConditions.Location = new System.Drawing.Point(25, 93);
+            this.lblTodayConditions.Location = new System.Drawing.Point(3, 93);
+            this.lblTodayConditions.MaximumSize = new System.Drawing.Size(95, 0);
             this.lblTodayConditions.Name = "lblTodayConditions";
             this.lblTodayConditions.Size = new System.Drawing.Size(35, 13);
             this.lblTodayConditions.TabIndex = 10;
@@ -150,6 +153,7 @@
             this.pbTodayConditions.Location = new System.Drawing.Point(28, 60);
             this.pbTodayConditions.Name = "pbTodayConditions";
             this.pbTodayConditions.Size = new System.Drawing.Size(45, 30);
+            this.pbTodayConditions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTodayConditions.TabIndex = 9;
             this.pbTodayConditions.TabStop = false;
             // 
@@ -187,17 +191,18 @@
             // lblTomorrowDate
             // 
             this.lblTomorrowDate.AutoSize = true;
-            this.lblTomorrowDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTomorrowDate.Location = new System.Drawing.Point(25, 122);
+            this.lblTomorrowDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTomorrowDate.Location = new System.Drawing.Point(31, 133);
             this.lblTomorrowDate.Name = "lblTomorrowDate";
-            this.lblTomorrowDate.Size = new System.Drawing.Size(48, 22);
+            this.lblTomorrowDate.Size = new System.Drawing.Size(38, 17);
             this.lblTomorrowDate.TabIndex = 12;
             this.lblTomorrowDate.Text = "Date";
             // 
             // lblTomorrowConditions
             // 
             this.lblTomorrowConditions.AutoSize = true;
-            this.lblTomorrowConditions.Location = new System.Drawing.Point(25, 93);
+            this.lblTomorrowConditions.Location = new System.Drawing.Point(3, 93);
+            this.lblTomorrowConditions.MaximumSize = new System.Drawing.Size(95, 0);
             this.lblTomorrowConditions.Name = "lblTomorrowConditions";
             this.lblTomorrowConditions.Size = new System.Drawing.Size(35, 13);
             this.lblTomorrowConditions.TabIndex = 11;
@@ -208,6 +213,7 @@
             this.pbTomorrowConditions.Location = new System.Drawing.Point(28, 60);
             this.pbTomorrowConditions.Name = "pbTomorrowConditions";
             this.pbTomorrowConditions.Size = new System.Drawing.Size(45, 30);
+            this.pbTomorrowConditions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbTomorrowConditions.TabIndex = 10;
             this.pbTomorrowConditions.TabStop = false;
             // 
@@ -245,17 +251,18 @@
             // lblDayAfterDate
             // 
             this.lblDayAfterDate.AutoSize = true;
-            this.lblDayAfterDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDayAfterDate.Location = new System.Drawing.Point(25, 122);
+            this.lblDayAfterDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDayAfterDate.Location = new System.Drawing.Point(31, 133);
             this.lblDayAfterDate.Name = "lblDayAfterDate";
-            this.lblDayAfterDate.Size = new System.Drawing.Size(48, 22);
+            this.lblDayAfterDate.Size = new System.Drawing.Size(38, 17);
             this.lblDayAfterDate.TabIndex = 13;
             this.lblDayAfterDate.Text = "Date";
             // 
             // lblDayAfterConditions
             // 
             this.lblDayAfterConditions.AutoSize = true;
-            this.lblDayAfterConditions.Location = new System.Drawing.Point(25, 93);
+            this.lblDayAfterConditions.Location = new System.Drawing.Point(3, 93);
+            this.lblDayAfterConditions.MaximumSize = new System.Drawing.Size(95, 0);
             this.lblDayAfterConditions.Name = "lblDayAfterConditions";
             this.lblDayAfterConditions.Size = new System.Drawing.Size(35, 13);
             this.lblDayAfterConditions.TabIndex = 12;
@@ -266,6 +273,7 @@
             this.pbDayAfterConditions.Location = new System.Drawing.Point(28, 60);
             this.pbDayAfterConditions.Name = "pbDayAfterConditions";
             this.pbDayAfterConditions.Size = new System.Drawing.Size(45, 30);
+            this.pbDayAfterConditions.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDayAfterConditions.TabIndex = 11;
             this.pbDayAfterConditions.TabStop = false;
             // 

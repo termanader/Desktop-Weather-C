@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace DesktopWeather
 {
@@ -11,76 +12,112 @@ namespace DesktopWeather
         string forecastUnits = "";
 
         string currentIcon = "";
+        Bitmap currentImage = new Bitmap(Properties.Resources.clear_day);
         string currentSummary = "";
         float currentTemp = 0;
         
         string todayIcon = "";
+        Bitmap todayImage = new Bitmap(Properties.Resources.clear_day);
         string todaySummary = "";
         float todayHigh = 0;
+        DateTime todayDate;
 
         string tomorrowIcon = "";
+        Bitmap tomorrowImage = new Bitmap(Properties.Resources.clear_day);
         string tomorrowSummary = "";
         float tomorrowHigh = 0;
+        DateTime tomorrowDate;
 
         string dayAfterIcon = "";
+        Bitmap dayAfterImage = new Bitmap(Properties.Resources.clear_day);
         string dayAfterSummary = "";
         float dayAfterHigh = 0;
+        DateTime dayAfterDate;
 
-        #region Forecast Icons
-        public string iconCurrently
+        Bitmap icon_tmp = new Bitmap(Properties.Resources.cloudy);
+
+        public void setIconCurrently(string value)
         {
-            get
-            {
-                return currentIcon;
-            }
-            set
-            {
-
-                currentIcon = value;
-            }
+            currentIcon = value;
         }
 
-        public string iconToday
+        public Bitmap getIconCurrently()
         {
-            get
-            {
-                return todayIcon;
-            }
-            set
-            {
-
-                todayIcon = value;
-            }
+            currentImage = convertIcon(currentIcon);
+            return currentImage;
         }
 
-        public string iconTomorrow
+        public void setIconToday(string value)
         {
-            get
-            {
-                return tomorrowIcon;
-            }
-            set
-            {
-
-                tomorrowIcon = value;
-            }
+            todayIcon = value;
         }
 
-        public string iconDayAfter
+        public Bitmap getIconToday()
         {
-            get
-            {
-                return dayAfterIcon;
-            }
-            set
-            {
-
-                dayAfterIcon = value;
-            }
+            todayImage = convertIcon(todayIcon);
+            return todayImage;
         }
-        #endregion
 
-        #region Forecast Summaries
+        public void setIconTomorrow(string value)
+        {
+            tomorrowIcon = value;
+        }
+
+        public Bitmap getIconTomorrow()
+        {
+            tomorrowImage = convertIcon(tomorrowIcon);
+            return tomorrowImage;
+        }
+
+        public void setIconDayAfter(string value)
+        {
+            dayAfterIcon = value;
+        }
+
+        public Bitmap getIconDayAfter()
+        {
+            dayAfterImage = convertIcon(dayAfterIcon);
+            return dayAfterImage;
+        }
+
+        public Bitmap convertIcon(string icon)
+        {
+            switch (icon)
+            {
+                case "snow":
+                    icon_tmp = Properties.Resources.snow;
+                    break;
+                case "sleet":
+                    icon_tmp = Properties.Resources.sleet;
+                    break;
+                case "rain":
+                    icon_tmp = Properties.Resources.rain;
+                    break;
+                case "partly-cloudy-night":
+                    icon_tmp = Properties.Resources.party_cloudy_night;
+                    break;
+                case "partly-cloudy-day":
+                    icon_tmp = Properties.Resources.partly_cloudy_day;
+                    break;
+                case "fog":
+                    icon_tmp = Properties.Resources.fog;
+                    break;
+                case "cloudy":
+                    icon_tmp = Properties.Resources.cloudy;
+                    break;
+                case "clear-night":
+                    icon_tmp = Properties.Resources.clear_night;
+                    break;
+                case "clear-day":
+                    icon_tmp = Properties.Resources.clear_day;
+                    break;
+                default:
+                    icon_tmp = Properties.Resources.cloudy;
+                    break;
+            }
+            return icon_tmp;
+        }
+
         public string summaryCurrently
         {
             get
@@ -132,9 +169,7 @@ namespace DesktopWeather
                 dayAfterSummary = value;
             }
         }
-        #endregion
-
-        #region Forecast Temperatures
+        
         public float tempCurrently
         {
             get
@@ -186,7 +221,10 @@ namespace DesktopWeather
                 dayAfterHigh = value;
             }
         }
-        #endregion
+
+        public void getTodayDate
+        {
+        }
 
         public string Units
         {
@@ -202,6 +240,14 @@ namespace DesktopWeather
             {
                 forecastUnits = value;
             }
+        }
+
+        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+        {
+            // Unix timestamp is seconds past epoch
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
+            return dtDateTime;
         }
     }
 }

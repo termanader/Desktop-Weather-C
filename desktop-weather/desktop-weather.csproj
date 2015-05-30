@@ -101,8 +101,33 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\weather-icons\clear-day.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather-icons\clear-night.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather-icons\cloudy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather-icons\fog.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather-icons\partly-cloudy-day.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather-icons\party-cloudy-night.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather-icons\rain.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather-icons\sleet.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weather-icons\snow.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

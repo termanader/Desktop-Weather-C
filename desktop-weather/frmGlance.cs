@@ -16,6 +16,16 @@ namespace weather_desktop
         clsForecast forecast = new clsForecast();
         clsDataGetter data = new clsDataGetter();
 
+        object clear_day = DesktopWeather.Properties.Resources.ResourceManager.GetObject("clear-day");
+        object clear_night = DesktopWeather.Properties.Resources.ResourceManager.GetObject("clear-night");
+        object cloudy = DesktopWeather.Properties.Resources.ResourceManager.GetObject("cloudy");
+        object fog = DesktopWeather.Properties.Resources.ResourceManager.GetObject("fog");
+        object partly_cloudy_day = DesktopWeather.Properties.Resources.ResourceManager.GetObject("partly-cloudy-day");
+        object partly_cloudy_night = DesktopWeather.Properties.Resources.ResourceManager.GetObject("partly-cloudy-night");
+        object rain = DesktopWeather.Properties.Resources.ResourceManager.GetObject("rain");
+        object sleet = DesktopWeather.Properties.Resources.ResourceManager.GetObject("sleet");
+        object snow = DesktopWeather.Properties.Resources.ResourceManager.GetObject("snow");
+
         public frmGlance()
         {
             InitializeComponent();
@@ -31,6 +41,11 @@ namespace weather_desktop
             lblTodayConditions.Text = forecast.summaryToday;
             lblTomorrowConditions.Text = forecast.summaryTomorrow;
             lblDayAfterConditions.Text = forecast.summaryDayAfter;
+
+            pbCurrentConditions.Image = forecast.getIconCurrently();
+            pbTodayConditions.Image = forecast.getIconToday();
+            pbTomorrowConditions.Image = forecast.getIconTomorrow();
+            pbDayAfterConditions.Image = forecast.getIconDayAfter();
         }
 
         private void pbLogo_Click(object sender, EventArgs e)

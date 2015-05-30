@@ -45,14 +45,20 @@ namespace DesktopWeather
             forecast.setIconToday(response.daily.data[0].icon);
             forecast.summaryToday = response.daily.data[0].summary;
             forecast.highToday = response.daily.data[0].temperatureMax;
+            forecast.lowToday = response.daily.data[0].temperatureMin;
+            forecast.dateToday = response.daily.data[0].time.ToString();
 
             forecast.setIconTomorrow(response.daily.data[1].icon);
             forecast.summaryTomorrow = response.daily.data[1].summary;
             forecast.highTomorrow = response.daily.data[1].temperatureMax;
+            forecast.lowTomorrow = response.daily.data[1].temperatureMin;
+            forecast.dateTomorrow = response.daily.data[1].time.ToString();
 
             forecast.setIconDayAfter(response.daily.data[2].icon);
             forecast.summaryDayAfter = response.daily.data[2].summary;
             forecast.highDayAfter = response.daily.data[2].temperatureMax;
+            forecast.lowDayAfter = response.daily.data[2].temperatureMin;
+            forecast.dateDayAfter = response.daily.data[2].time.ToString();
 
             forecast.Units = response.flags.units;
             return forecast;

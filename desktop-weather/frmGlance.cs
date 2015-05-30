@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DesktopWeather;
+using System.Timers;
 
 namespace weather_desktop
 {
@@ -16,26 +17,33 @@ namespace weather_desktop
         clsForecast forecast = new clsForecast();
         clsDataGetter data = new clsDataGetter();
 
-        object clear_day = DesktopWeather.Properties.Resources.ResourceManager.GetObject("clear-day");
-        object clear_night = DesktopWeather.Properties.Resources.ResourceManager.GetObject("clear-night");
-        object cloudy = DesktopWeather.Properties.Resources.ResourceManager.GetObject("cloudy");
-        object fog = DesktopWeather.Properties.Resources.ResourceManager.GetObject("fog");
-        object partly_cloudy_day = DesktopWeather.Properties.Resources.ResourceManager.GetObject("partly-cloudy-day");
-        object partly_cloudy_night = DesktopWeather.Properties.Resources.ResourceManager.GetObject("partly-cloudy-night");
-        object rain = DesktopWeather.Properties.Resources.ResourceManager.GetObject("rain");
-        object sleet = DesktopWeather.Properties.Resources.ResourceManager.GetObject("sleet");
-        object snow = DesktopWeather.Properties.Resources.ResourceManager.GetObject("snow");
-
         public frmGlance()
         {
             InitializeComponent();
             data.getLatLon();
+
+            updateData();
+
+            System.Timers.Timer aTimer = new System.Timers.Timer();
+            aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            aTimer.Interval = 5000;
+            aTimer.Enabled = true;
+        }
+
+        // Specify what you want to happen when the Elapsed event is raised.
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            updateData();
+        }
+
+        private void updateData()
+        {
             forecast = data.getForecast(forecast);
 
             lblCurrentTemp.Text = forecast.tempCurrently.ToString() + "\u00B0" + forecast.Units;
-            lblTodayHigh.Text = forecast.highToday.ToString() + "\u00B0" + forecast.Units;
-            lblTomorrowHigh.Text = forecast.highTomorrow.ToString() + "\u00B0" + forecast.Units;
-            lblDayAfterHigh.Text = forecast.highDayAfter.ToString() + "\u00B0" + forecast.Units;
+            lblTodayTemp.Text = forecast.highToday.ToString("0") + "/" + forecast.lowToday.ToString("0") + "\u00B0" + forecast.Units;
+            lblTomorrowTemp.Text = forecast.highTomorrow.ToString("0") + "/" + forecast.lowTomorrow.ToString("0") + "\u00B0" + forecast.Units;
+            lblDayAfterTemp.Text = forecast.highDayAfter.ToString("0") + "/" + forecast.lowDayAfter.ToString("0") + "\u00B0" + forecast.Units;
 
             lblCurrentConditions.Text = forecast.summaryCurrently;
             lblTodayConditions.Text = forecast.summaryToday;
@@ -46,6 +54,12 @@ namespace weather_desktop
             pbTodayConditions.Image = forecast.getIconToday();
             pbTomorrowConditions.Image = forecast.getIconTomorrow();
             pbDayAfterConditions.Image = forecast.getIconDayAfter();
+
+            lblTodayDate.Text = forecast.dateToday;
+            lblTomorrowDate.Text = forecast.dateTomorrow;
+            lblDayAfterDate.Text = forecast.dateDayAfter;
+
+            lblLastUpdate.Text = "Last Updated: " + DateTime.Now.ToString();
         }
 
         private void pbLogo_Click(object sender, EventArgs e)
@@ -57,6 +71,11 @@ namespace weather_desktop
         {
             frmAbout About = new frmAbout();
             About.ShowDialog();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            updateData();
         }
     }
 }

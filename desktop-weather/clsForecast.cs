@@ -20,19 +20,22 @@ namespace DesktopWeather
         Bitmap todayImage = new Bitmap(Properties.Resources.clear_day);
         string todaySummary = "";
         float todayHigh = 0;
-        DateTime todayDate;
+        float todayLow = 0;
+        string todayDate;
 
         string tomorrowIcon = "";
         Bitmap tomorrowImage = new Bitmap(Properties.Resources.clear_day);
         string tomorrowSummary = "";
         float tomorrowHigh = 0;
-        DateTime tomorrowDate;
+        float tomorrowLow = 0;
+        string tomorrowDate;
 
         string dayAfterIcon = "";
         Bitmap dayAfterImage = new Bitmap(Properties.Resources.clear_day);
         string dayAfterSummary = "";
         float dayAfterHigh = 0;
-        DateTime dayAfterDate;
+        float dayAfterLow = 0;
+        string dayAfterDate;
 
         Bitmap icon_tmp = new Bitmap(Properties.Resources.cloudy);
 
@@ -222,8 +225,79 @@ namespace DesktopWeather
             }
         }
 
-        public void getTodayDate
+        public float lowToday
         {
+            get
+            {
+                return todayLow;
+            }
+            set
+            {
+
+                todayLow = value;
+            }
+        }
+
+        public float lowTomorrow
+        {
+            get
+            {
+                return tomorrowLow;
+            }
+            set
+            {
+
+                tomorrowLow = value;
+            }
+        }
+
+        public float lowDayAfter
+        {
+            get
+            {
+                return dayAfterLow;
+            }
+            set
+            {
+
+                dayAfterLow = value;
+            }
+        }
+
+        public string dateToday
+        {
+            get
+            {
+                return todayDate;
+            }
+            set
+            {
+                todayDate = UnixTimeStampToDateTime(double.Parse(value));
+            }
+        }
+
+        public string dateTomorrow
+        {
+            get
+            {
+                return tomorrowDate;
+            }
+            set
+            {
+                tomorrowDate = UnixTimeStampToDateTime(double.Parse(value));
+            }
+        }
+
+        public string dateDayAfter
+        {
+            get
+            {
+                return dayAfterDate;
+            }
+            set
+            {
+                dayAfterDate = UnixTimeStampToDateTime(double.Parse(value));
+            }
         }
 
         public string Units
@@ -242,12 +316,13 @@ namespace DesktopWeather
             }
         }
 
-        public static DateTime UnixTimeStampToDateTime(double unixTimeStamp)
+        public static string UnixTimeStampToDateTime(double unixTimeStamp)
         {
             // Unix timestamp is seconds past epoch
             System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
             dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
-            return dtDateTime;
+            string stMonthDay = dtDateTime.Month + "/" + dtDateTime.Day;
+            return stMonthDay;
         }
     }
 }

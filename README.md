@@ -2,7 +2,7 @@
 
 Currently, there is no decent weather forecasting program for the Windows desktop environment.  The Weather Channel does have one, but it's pretty large, a little flaky, and includes large advertisements.  This project is geared towards accomplishing the same goal but doing so in a smaller window with only the necessary information.
 
-This program does use the Weather Underground API and does require an API key available from [https://developer.forecast.io/](https://developer.forecast.io/ "Forecast.IO").
+This program does use the Forecast API and does require an API key available from [https://developer.forecast.io/](https://developer.forecast.io/ "Forecast.IO").
 
 ## Screenshot
 

@@ -26,7 +26,7 @@ namespace weather_desktop
 
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-            aTimer.Interval = 5000;
+            aTimer.Interval = 3600000; // 1 Hour
             aTimer.Enabled = true;
         }
 

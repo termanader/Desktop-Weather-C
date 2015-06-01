@@ -82,7 +82,7 @@
             // 
             this.lblCurrentConditions.AutoSize = true;
             this.lblCurrentConditions.Location = new System.Drawing.Point(3, 93);
-            this.lblCurrentConditions.MaximumSize = new System.Drawing.Size(95, 0);
+            this.lblCurrentConditions.MaximumSize = new System.Drawing.Size(95, 20);
             this.lblCurrentConditions.Name = "lblCurrentConditions";
             this.lblCurrentConditions.Size = new System.Drawing.Size(35, 13);
             this.lblCurrentConditions.TabIndex = 9;
@@ -145,7 +145,7 @@
             // 
             this.lblTodayConditions.AutoSize = true;
             this.lblTodayConditions.Location = new System.Drawing.Point(3, 93);
-            this.lblTodayConditions.MaximumSize = new System.Drawing.Size(95, 0);
+            this.lblTodayConditions.MaximumSize = new System.Drawing.Size(95, 40);
             this.lblTodayConditions.Name = "lblTodayConditions";
             this.lblTodayConditions.Size = new System.Drawing.Size(35, 13);
             this.lblTodayConditions.TabIndex = 10;
@@ -208,7 +208,7 @@
             // 
             this.lblTomorrowConditions.AutoSize = true;
             this.lblTomorrowConditions.Location = new System.Drawing.Point(3, 93);
-            this.lblTomorrowConditions.MaximumSize = new System.Drawing.Size(95, 0);
+            this.lblTomorrowConditions.MaximumSize = new System.Drawing.Size(95, 40);
             this.lblTomorrowConditions.Name = "lblTomorrowConditions";
             this.lblTomorrowConditions.Size = new System.Drawing.Size(35, 13);
             this.lblTomorrowConditions.TabIndex = 11;
@@ -271,7 +271,7 @@
             // 
             this.lblDayAfterConditions.AutoSize = true;
             this.lblDayAfterConditions.Location = new System.Drawing.Point(3, 93);
-            this.lblDayAfterConditions.MaximumSize = new System.Drawing.Size(95, 0);
+            this.lblDayAfterConditions.MaximumSize = new System.Drawing.Size(95, 40);
             this.lblDayAfterConditions.Name = "lblDayAfterConditions";
             this.lblDayAfterConditions.Size = new System.Drawing.Size(35, 13);
             this.lblDayAfterConditions.TabIndex = 12;

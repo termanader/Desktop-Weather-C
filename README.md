@@ -2,11 +2,11 @@
 
 Currently, there is no decent weather forecasting program for the Windows desktop environment.  The Weather Channel does have one, but it's pretty large, a little flaky, and includes large advertisements.  This project is geared towards accomplishing the same goal but doing so in a smaller window with only the necessary information.
 
-This program does use the Weather Underground API and does require an API key available from [http://www.wunderground.com/weather/api/](http://www.wunderground.com/weather/api/ "Weather Underground API").
+This program does use the Weather Underground API and does require an API key available from [https://developer.forecast.io/](https://developer.forecast.io/ "Forecast.IO").
 
 ## Screenshot
 
-![App in action](https://kruug.org/draconemsoft/images/desktopweather/DesktopWeather_0_8_5.png)
+![App in action](https://kruug.org/draconemsoft/images/desktopweather/DesktopWeather_0_9_0.png)
 
 ## Installation
 
@@ -18,7 +18,7 @@ This program requires the .Net 4.5 run-time.  Download here: [http://www.microso
 
 ## Usage
 
-Currently, there is a constant available in the code for the API key, but the location is hard-coded.
+Currently, there is a constant available in the code for the API key.  You will have to get your own key if you build from source, but the pre-compiled binary has a key already enabled.
 
 ## Contributing
 
@@ -36,11 +36,11 @@ Currently, there is a constant available in the code for the API key, but the lo
  - 2015-02-19: Stable build, changed `Imperial` to `US units`, changed WU logo to adhere to their specifications, timed refresh now working (v 0.8)
  - 2015-03-02: Stable build, tweaked UI, separated current conditions class from forecast class, added About window (v 0.8.5)
  - 2015-05-20: Added IP to Latitude/Longitude class/function, added some variables to start moving to new weather API (No new release)
+ - 2015-05-31: Converted to C#, location-based forecast fully working, changed API and all related documentation (v 0.9.0)
 
 ## Future/To-Do
 
 ### To trigger v1.0 release
- - Add a city/zip code chooser so that user can pick where the weather should track
  - Fix 3-day forecast not auto-updating
 
 ### Additional wish-list

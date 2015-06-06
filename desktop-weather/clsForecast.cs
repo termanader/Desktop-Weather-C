@@ -10,77 +10,25 @@ namespace DesktopWeather
     class clsForecast
     {
         string forecastUnits = "";
-
-        string currentIcon = "";
-        Bitmap currentImage = new Bitmap(Properties.Resources.clear_day);
-        string currentSummary = "";
-        float currentTemp = 0;
-        
-        string todayIcon = "";
-        Bitmap todayImage = new Bitmap(Properties.Resources.clear_day);
-        string todaySummary = "";
-        float todayHigh = 0;
-        float todayLow = 0;
-        string todayDate;
-
-        string tomorrowIcon = "";
-        Bitmap tomorrowImage = new Bitmap(Properties.Resources.clear_day);
-        string tomorrowSummary = "";
-        float tomorrowHigh = 0;
-        float tomorrowLow = 0;
-        string tomorrowDate;
-
-        string dayAfterIcon = "";
-        Bitmap dayAfterImage = new Bitmap(Properties.Resources.clear_day);
-        string dayAfterSummary = "";
-        float dayAfterHigh = 0;
-        float dayAfterLow = 0;
-        string dayAfterDate;
+        string date = "";
+        float high = 0;
+        string icon = "";
+        Bitmap image = new Bitmap(Properties.Resources.clear_day);
+        float low = 0;
+        string summary = "";
+        float temp = 0;
 
         Bitmap icon_tmp = new Bitmap(Properties.Resources.cloudy);
 
-        public void setIconCurrently(string value)
+        public void setIcon(string value)
         {
-            currentIcon = value;
+            icon = value;
         }
 
-        public Bitmap getIconCurrently()
+        public Bitmap getIcon()
         {
-            currentImage = convertIcon(currentIcon);
-            return currentImage;
-        }
-
-        public void setIconToday(string value)
-        {
-            todayIcon = value;
-        }
-
-        public Bitmap getIconToday()
-        {
-            todayImage = convertIcon(todayIcon);
-            return todayImage;
-        }
-
-        public void setIconTomorrow(string value)
-        {
-            tomorrowIcon = value;
-        }
-
-        public Bitmap getIconTomorrow()
-        {
-            tomorrowImage = convertIcon(tomorrowIcon);
-            return tomorrowImage;
-        }
-
-        public void setIconDayAfter(string value)
-        {
-            dayAfterIcon = value;
-        }
-
-        public Bitmap getIconDayAfter()
-        {
-            dayAfterImage = convertIcon(dayAfterIcon);
-            return dayAfterImage;
+            image = convertIcon(icon);
+            return image;
         }
 
         public Bitmap convertIcon(string icon)
@@ -121,182 +69,67 @@ namespace DesktopWeather
             return icon_tmp;
         }
 
-        public string summaryCurrently
+        public string getSetSummary
         {
             get
             {
-                return currentSummary;
+                return summary;
             }
             set
             {
 
-                currentSummary = value;
-            }
-        }
-
-        public string summaryToday
-        {
-            get
-            {
-                return todaySummary;
-            }
-            set
-            {
-
-                todaySummary = value;
-            }
-        }
-
-        public string summaryTomorrow
-        {
-            get
-            {
-                return tomorrowSummary;
-            }
-            set
-            {
-
-                tomorrowSummary = value;
-            }
-        }
-
-        public string summaryDayAfter
-        {
-            get
-            {
-                return dayAfterSummary;
-            }
-            set
-            {
-
-                dayAfterSummary = value;
+                summary = value;
             }
         }
         
-        public float tempCurrently
+        public float getSetTemp
         {
             get
             {
-                return currentTemp;
+                return temp;
             }
             set
             {
 
-                currentTemp = value;
+                temp = value;
             }
         }
 
-        public float highToday
+        public float getSetHigh
         {
             get
             {
-                return todayHigh;
+                return high;
             }
             set
             {
 
-                todayHigh = value;
+                high = value;
             }
         }
 
-        public float highTomorrow
+        public float getSetLow
         {
             get
             {
-                return tomorrowHigh;
+                return low;
             }
             set
             {
 
-                tomorrowHigh = value;
+                low = value;
             }
         }
 
-        public float highDayAfter
+        public string getSetDate
         {
             get
             {
-                return dayAfterHigh;
+                return date;
             }
             set
             {
-
-                dayAfterHigh = value;
-            }
-        }
-
-        public float lowToday
-        {
-            get
-            {
-                return todayLow;
-            }
-            set
-            {
-
-                todayLow = value;
-            }
-        }
-
-        public float lowTomorrow
-        {
-            get
-            {
-                return tomorrowLow;
-            }
-            set
-            {
-
-                tomorrowLow = value;
-            }
-        }
-
-        public float lowDayAfter
-        {
-            get
-            {
-                return dayAfterLow;
-            }
-            set
-            {
-
-                dayAfterLow = value;
-            }
-        }
-
-        public string dateToday
-        {
-            get
-            {
-                return todayDate;
-            }
-            set
-            {
-                todayDate = UnixTimeStampToDateTime(double.Parse(value));
-            }
-        }
-
-        public string dateTomorrow
-        {
-            get
-            {
-                return tomorrowDate;
-            }
-            set
-            {
-                tomorrowDate = UnixTimeStampToDateTime(double.Parse(value));
-            }
-        }
-
-        public string dateDayAfter
-        {
-            get
-            {
-                return dayAfterDate;
-            }
-            set
-            {
-                dayAfterDate = UnixTimeStampToDateTime(double.Parse(value));
+                date = UnixTimeStampToDateTime(double.Parse(value));
             }
         }
 

@@ -15,11 +15,12 @@ namespace DesktopWeather
     {
         const string API_KEY = "";
 
+        clsForecast current = new clsForecast();
         float flat = 0;
         float flon = 0;
         string lat = "";
         string lon = "";
-
+        
         WebClient wcLatLon = new WebClient();
 
         public void getLatLon()
@@ -32,35 +33,32 @@ namespace DesktopWeather
             flon = float.Parse(lon, CultureInfo.InvariantCulture.NumberFormat);
         }
 
-        public clsForecast getForecast(clsForecast forecast)
+        public clsForecast[] getForecast(clsForecast[] forecast)
         {
             // API Key, Lat, Long, Unit
             var request = new ForecastIORequest(API_KEY, flat, flon, Unit.auto);
             var response = request.Get();
 
-            forecast.setIconCurrently(response.currently.icon);
-            forecast.summaryCurrently = response.currently.summary;
-            forecast.tempCurrently = response.currently.temperature;
+            for (int i = 0; i < 8; i++)
+            {
+                clsForecast tempForecast = new clsForecast();
+                tempForecast.setIcon(response.daily.data[i].icon);
+                tempForecast.getSetSummary = response.daily.data[i].summary;
+                tempForecast.getSetHigh = response.daily.data[i].temperatureMax;
+                tempForecast.getSetLow = response.daily.data[i].temperatureMin;
+                tempForecast.getSetDate = response.daily.data[i].time.ToString();
+                tempForecast.Units = response.flags.units;
 
-            forecast.setIconToday(response.daily.data[0].icon);
-            forecast.summaryToday = response.daily.data[0].summary;
-            forecast.highToday = response.daily.data[0].temperatureMax;
-            forecast.lowToday = response.daily.data[0].temperatureMin;
-            forecast.dateToday = response.daily.data[0].time.ToString();
+                forecast[i] = tempForecast;
+            }
 
-            forecast.setIconTomorrow(response.daily.data[1].icon);
-            forecast.summaryTomorrow = response.daily.data[1].summary;
-            forecast.highTomorrow = response.daily.data[1].temperatureMax;
-            forecast.lowTomorrow = response.daily.data[1].temperatureMin;
-            forecast.dateTomorrow = response.daily.data[1].time.ToString();
+            current.setIcon(response.currently.icon);
+            current.getSetSummary = response.currently.summary;
+            current.getSetTemp = response.currently.temperature;
 
-            forecast.setIconDayAfter(response.daily.data[2].icon);
-            forecast.summaryDayAfter = response.daily.data[2].summary;
-            forecast.highDayAfter = response.daily.data[2].temperatureMax;
-            forecast.lowDayAfter = response.daily.data[2].temperatureMin;
-            forecast.dateDayAfter = response.daily.data[2].time.ToString();
+            current.Units = response.flags.units;
 
-            forecast.Units = response.flags.units;
+            forecast[9] = current;
             return forecast;
         }
     }

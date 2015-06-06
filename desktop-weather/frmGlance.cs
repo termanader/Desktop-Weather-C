@@ -14,7 +14,7 @@ namespace weather_desktop
 {
     public partial class frmGlance : Form
     {
-        clsForecast forecast = new clsForecast();
+        clsForecast[] forecast = new clsForecast[10];
         clsDataGetter data = new clsDataGetter();
 
         public frmGlance()
@@ -40,24 +40,24 @@ namespace weather_desktop
         {
             forecast = data.getForecast(forecast);
 
-            lblCurrentTemp.Text = forecast.tempCurrently.ToString() + "\u00B0" + forecast.Units;
-            lblTodayTemp.Text = forecast.highToday.ToString("0") + "/" + forecast.lowToday.ToString("0") + "\u00B0" + forecast.Units;
-            lblTomorrowTemp.Text = forecast.highTomorrow.ToString("0") + "/" + forecast.lowTomorrow.ToString("0") + "\u00B0" + forecast.Units;
-            lblDayAfterTemp.Text = forecast.highDayAfter.ToString("0") + "/" + forecast.lowDayAfter.ToString("0") + "\u00B0" + forecast.Units;
+            lblCurrentTemp.Text = forecast[9].getSetTemp.ToString() + "\u00B0" + forecast[9].Units;
+            lblTodayTemp.Text = forecast[0].getSetHigh.ToString("0") + "/" + forecast[0].getSetLow.ToString("0") + "\u00B0" + forecast[0].Units;
+            lblTomorrowTemp.Text = forecast[1].getSetHigh.ToString("0") + "/" + forecast[1].getSetLow.ToString("0") + "\u00B0" + forecast[1].Units;
+            lblDayAfterTemp.Text = forecast[2].getSetHigh.ToString("0") + "/" + forecast[2].getSetLow.ToString("0") + "\u00B0" + forecast[2].Units;
 
-            lblCurrentConditions.Text = forecast.summaryCurrently;
-            lblTodayConditions.Text = forecast.summaryToday;
-            lblTomorrowConditions.Text = forecast.summaryTomorrow;
-            lblDayAfterConditions.Text = forecast.summaryDayAfter;
+            lblCurrentConditions.Text = forecast[9].getSetSummary;
+            lblTodayConditions.Text = forecast[0].getSetSummary;
+            lblTomorrowConditions.Text = forecast[1].getSetSummary;
+            lblDayAfterConditions.Text = forecast[2].getSetSummary;
 
-            pbCurrentConditions.Image = forecast.getIconCurrently();
-            pbTodayConditions.Image = forecast.getIconToday();
-            pbTomorrowConditions.Image = forecast.getIconTomorrow();
-            pbDayAfterConditions.Image = forecast.getIconDayAfter();
+            pbCurrentConditions.Image = forecast[9].getIcon();
+            pbTodayConditions.Image = forecast[0].getIcon();
+            pbTomorrowConditions.Image = forecast[1].getIcon();
+            pbDayAfterConditions.Image = forecast[2].getIcon();
 
-            lblTodayDate.Text = forecast.dateToday;
-            lblTomorrowDate.Text = forecast.dateTomorrow;
-            lblDayAfterDate.Text = forecast.dateDayAfter;
+            lblTodayDate.Text = forecast[0].getSetDate;
+            lblTomorrowDate.Text = forecast[1].getSetDate;
+            lblDayAfterDate.Text = forecast[2].getSetDate;
 
             lblLastUpdate.Text = "Last Updated: " + DateTime.Now.ToString();
         }

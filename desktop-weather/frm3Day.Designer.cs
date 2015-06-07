@@ -352,11 +352,12 @@
             // 
             // btnSettings
             // 
-            this.btnSettings.Location = new System.Drawing.Point(317, 165);
+            this.btnSettings.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSettings.BackgroundImage")));
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSettings.Location = new System.Drawing.Point(347, 164);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(53, 23);
+            this.btnSettings.Size = new System.Drawing.Size(25, 25);
             this.btnSettings.TabIndex = 7;
-            this.btnSettings.Text = "Settings";
             this.btnSettings.UseVisualStyleBackColor = true;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 

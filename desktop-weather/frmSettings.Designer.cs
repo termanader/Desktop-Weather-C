@@ -130,7 +130,10 @@
             this.Controls.Add(this.pb3Day);
             this.Controls.Add(this.pb8Day);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmSettings";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Desktop Weather Settings";
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrently)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb3Day)).EndInit();

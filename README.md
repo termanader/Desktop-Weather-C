@@ -37,6 +37,7 @@ Currently, there is a constant available in the code for the API key.  You will 
  - 2015-03-02: Stable build, tweaked UI, separated current conditions class from forecast class, added About window (v 0.8.5)
  - 2015-05-20: Added IP to Latitude/Longitude class/function, added some variables to start moving to new weather API (No new release)
  - 2015-05-31: Converted to C#, location-based forecast fully working, changed API and all related documentation (v 0.9.0)
+ - 2015-06-06: 3-Day forecast auto-updates properly, option to view current-only weather in a small on-top window in bottom right corner of monitor, getting a few things buttoned up before v1.0 release
 
 ## Future/To-Do
 
@@ -45,9 +46,7 @@ Currently, there is a constant available in the code for the API key.  You will 
 
 ### Additional wish-list
  - Add a pop-up window for forecast details
- - Add option for more days for forecasting (currently today + 2 more, maybe expand to 5 or 10 days)
- - Add smaller "Current Conditions" window to take up even less screen real estate
- - Add "Keep On Top" option
+ - Add option for more days for forecasting (currently today + 2 more, maybe expand to 5 or 10 days)(Mostly done, looking to add today + 6 more)
 
 ## License
 

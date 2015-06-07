@@ -20,11 +20,6 @@ namespace weather_desktop
         clsDataGetter data = new clsDataGetter();
         frmSettings Settings = new frmSettings();
 
-        private void frmGlance_Activated(object sender, System.EventArgs e)
-        {
-            
-        }
-
         public frmGlance()
         {
             InitializeComponent();
@@ -46,8 +41,8 @@ namespace weather_desktop
                 //Start Currently form
                 weatherCurrently.ShowDialog();
                 //Close this form
-                Dispose();
-                Close();
+                Visible = false;
+                this.Close();
             }
 
             data.getLatLon();

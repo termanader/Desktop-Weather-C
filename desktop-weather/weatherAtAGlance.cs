@@ -20,7 +20,7 @@ namespace weather_desktop
             {
                 Application.Run(new frmGlance());
             }
-            catch
+            catch (System.ObjectDisposedException)
             {
             }
         }

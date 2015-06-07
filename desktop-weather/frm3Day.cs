@@ -14,12 +14,42 @@ namespace weather_desktop
 {
     public partial class frmGlance : Form
     {
+        frmAbout About = new frmAbout();
+        frmCurrently weatherCurrently = new frmCurrently();
         clsForecast[] forecast = new clsForecast[10];
         clsDataGetter data = new clsDataGetter();
+        frmSettings Settings = new frmSettings();
+
+        private void frmGlance_Activated(object sender, System.EventArgs e)
+        {
+            
+        }
 
         public frmGlance()
         {
             InitializeComponent();
+
+            if (DesktopWeather.Properties.Settings.Default.Display == "3")
+            {
+                //Start 8-day form
+                //eight.ShowDialog();
+                //Close this form
+                //Close();
+            }
+
+            //  If Display == 2
+            //  Start this form
+            //  Carry on
+
+            if (DesktopWeather.Properties.Settings.Default.Display == "1")
+            {
+                //Start Currently form
+                weatherCurrently.ShowDialog();
+                //Close this form
+                Dispose();
+                Close();
+            }
+
             data.getLatLon();
 
             updateData();
@@ -69,13 +99,17 @@ namespace weather_desktop
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            frmAbout About = new frmAbout();
             About.ShowDialog();
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             updateData();
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            Settings.ShowDialog();
         }
     }
 }

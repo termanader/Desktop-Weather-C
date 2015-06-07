@@ -16,7 +16,13 @@ namespace weather_desktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGlance());
+            try
+            {
+                Application.Run(new frmGlance());
+            }
+            catch
+            {
+            }
         }
     }
 }

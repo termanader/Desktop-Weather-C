@@ -93,6 +93,26 @@ namespace DesktopWeather.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Currently {
+            get {
+                object obj = ResourceManager.GetObject("Currently", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eight_day {
+            get {
+                object obj = ResourceManager.GetObject("eight_day", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fog {
             get {
                 object obj = ResourceManager.GetObject("fog", resourceCulture);
@@ -147,6 +167,26 @@ namespace DesktopWeather.Properties {
             get {
                 object obj = ResourceManager.GetObject("snow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap three_day {
+            get {
+                object obj = ResourceManager.GetObject("three_day", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon weather_icon {
+            get {
+                object obj = ResourceManager.GetObject("weather_icon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
     }

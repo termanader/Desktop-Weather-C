@@ -118,31 +118,43 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="clear_day" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weather-icons\clear-day.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="clear_night" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weather-icons\clear-night.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weather-icons\cloudy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="fog" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weather-icons\fog.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="partly_cloudy_day" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weather-icons\partly-cloudy-day.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="party_cloudy_night" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weather-icons\party-cloudy-night.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weather-icons\rain.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sleet" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weather-icons\sleet.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cloudy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weather-icons\cloudy.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clear_night" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weather-icons\clear-night.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weather-icons\rain.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="party_cloudy_night" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weather-icons\party-cloudy-night.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clear_day" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weather-icons\clear-day.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="snow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\weather-icons\snow.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="partly_cloudy_day" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weather-icons\partly-cloudy-day.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="three_day" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3-Day.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eight_day" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8-Day.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Currently" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Currently.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="weather_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weather_icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -56,6 +56,7 @@
             this.lblLastUpdate = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnAbout = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.panCurrent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCurrentConditions)).BeginInit();
             this.panToday.SuspendLayout();
@@ -349,11 +350,22 @@
             this.btnAbout.UseVisualStyleBackColor = true;
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
+            // btnSettings
+            // 
+            this.btnSettings.Location = new System.Drawing.Point(317, 165);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(53, 23);
+            this.btnSettings.TabIndex = 7;
+            this.btnSettings.Text = "Settings";
+            this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // frmGlance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 191);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lblLastUpdate);
@@ -364,7 +376,10 @@
             this.Controls.Add(this.panCurrent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmGlance";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "At A Glance";
             this.panCurrent.ResumeLayout(false);
             this.panCurrent.PerformLayout();
@@ -413,6 +428,7 @@
         private System.Windows.Forms.Label lblDayAfterConditions;
         private System.Windows.Forms.PictureBox pbDayAfterConditions;
         private System.Windows.Forms.Label lblDayAfterTemp;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
 

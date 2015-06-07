@@ -11,6 +11,7 @@
     <AssemblyName>Desktop Weather</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,12 +24,11 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -38,7 +38,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -90,19 +90,37 @@
     <Compile Include="frmAbout.Designer.cs">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmGlance.cs">
+    <Compile Include="frm3Day.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmGlance.Designer.cs">
-      <DependentUpon>frmGlance.cs</DependentUpon>
+    <Compile Include="frm3Day.Designer.cs">
+      <DependentUpon>frm3Day.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCurrently.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCurrently.Designer.cs">
+      <DependentUpon>frmCurrently.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="weatherAtAGlance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAbout.resx">
       <DependentUpon>frmAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmGlance.resx">
-      <DependentUpon>frmGlance.cs</DependentUpon>
+    <EmbeddedResource Include="frm3Day.resx">
+      <DependentUpon>frm3Day.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCurrently.resx">
+      <DependentUpon>frmCurrently.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +148,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\3-Day.png" />
+    <None Include="Resources\8-Day.png" />
+    <None Include="Resources\Currently.png" />
+    <None Include="Resources\weather_icon.ico" />
     <Content Include="weather_icon.ico" />
   </ItemGroup>
   <ItemGroup>

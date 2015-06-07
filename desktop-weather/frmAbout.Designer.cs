@@ -71,7 +71,7 @@
             this.lblVersion.Name = "lblVersion";
             this.lblVersion.Size = new System.Drawing.Size(81, 17);
             this.lblVersion.TabIndex = 2;
-            this.lblVersion.Text = "Version 0.9.0";
+            this.lblVersion.Text = "Version 1.0.0";
             // 
             // lblCopyRight
             // 
@@ -141,6 +141,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAbout";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About Desktop Weather";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();

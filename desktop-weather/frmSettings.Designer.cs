@@ -75,6 +75,7 @@
             // rad8Day
             // 
             this.rad8Day.AutoSize = true;
+            this.rad8Day.Enabled = false;
             this.rad8Day.Location = new System.Drawing.Point(369, 29);
             this.rad8Day.Name = "rad8Day";
             this.rad8Day.Size = new System.Drawing.Size(97, 17);

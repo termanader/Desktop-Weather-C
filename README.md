@@ -6,7 +6,7 @@ This program does use the Forecast API and does require an API key available fro
 
 ## Screenshot
 
-![App in action](https://kruug.org/draconemsoft/images/desktopweather/DesktopWeather_0_9_0.png)
+![App in action](https://kruug.org/draconemsoft/images/desktopweather/DesktopWeather_1_0_0.png)
 
 ## Installation
 
@@ -38,11 +38,9 @@ Currently, there is a constant available in the code for the API key.  You will 
  - 2015-05-20: Added IP to Latitude/Longitude class/function, added some variables to start moving to new weather API (No new release)
  - 2015-05-31: Converted to C#, location-based forecast fully working, changed API and all related documentation (v 0.9.0)
  - 2015-06-06: 3-Day forecast auto-updates properly, option to view current-only weather in a small on-top window in bottom right corner of monitor, getting a few things buttoned up before v1.0 release
+ - 2015-06-07: Officially releasing v1.0.
 
 ## Future/To-Do
-
-### To trigger v1.0 release
- - Fix 3-day forecast not auto-updating
 
 ### Additional wish-list
  - Add a pop-up window for forecast details

@@ -15,10 +15,11 @@ namespace weather_desktop
     public partial class frmGlance : Form
     {
         frmAbout About = new frmAbout();
-        frmCurrently weatherCurrently = new frmCurrently();
-        clsForecast[] forecast = new clsForecast[10];
         clsDataGetter data = new clsDataGetter();
+        //frm8Day eight = new frm8Day();
+        clsForecast[] forecast = new clsForecast[10];
         frmSettings Settings = new frmSettings();
+        frmCurrently weatherCurrently = new frmCurrently();
 
         public frmGlance()
         {
@@ -29,6 +30,7 @@ namespace weather_desktop
                 //Start 8-day form
                 //eight.ShowDialog();
                 //Close this form
+                //Visible = false;
                 //Close();
             }
 
@@ -42,7 +44,7 @@ namespace weather_desktop
                 weatherCurrently.ShowDialog();
                 //Close this form
                 Visible = false;
-                this.Close();
+                Close();
             }
 
             data.getLatLon();
